@@ -45,16 +45,20 @@ export default function Navbar() {
     >
       <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-[68px]">
 
-        {/* Brand */}
-        <Link href="/" className="flex items-center gap-2.5 no-underline">
-          <div className="w-9 h-9 rounded-full bg-[#C1694F] flex items-center justify-center flex-shrink-0">
-            <span className="font-['Playfair_Display'] text-base font-bold text-white leading-none">Z</span>
-          </div>
-          <div className="leading-tight">
-            <span className="block font-['Playfair_Display'] text-[18px] font-bold text-[#C1694F] tracking-tight">Zion City</span>
-            
-          </div>
-        </Link>
+     {/* Brand */}
+<Link href="/" className="flex items-center gap-3 no-underline group">
+  <div className="w-10 h-10 rounded-full bg-[#C1694F] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+    <span className="font-['Playfair_Display'] text-lg font-bold text-white leading-none">Z</span>
+  </div>
+  <div className="flex flex-col justify-center">
+    <span className="block font-['Playfair_Display'] text-[19px] font-bold text-[#C1694F] leading-[1.1] tracking-tight">
+      Zion City
+    </span>
+    <span className="block font-['Nunito'] text-[11px] font-bold uppercase tracking-[0.05em] text-[#2C1810]/70 leading-tight">
+      Courtyard Widows Foundation
+    </span>
+  </div>
+</Link>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-7">

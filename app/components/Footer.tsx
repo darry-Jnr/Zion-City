@@ -22,15 +22,20 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-full bg-[#C1694F] flex items-center justify-center flex-shrink-0">
-                <span className="font-['Playfair_Display'] text-base font-bold text-white leading-none">Z</span>
-              </div>
-              <div className="leading-tight">
-                <span className="block font-['Playfair_Display'] text-[18px] font-bold text-[#E8927A] tracking-tight">Zion City</span>
-              </div>
-            </div>
-            <p className="text-sm text-white/60 leading-relaxed max-w-[240px]">
+           <Link href="/" className="flex items-center gap-3 no-underline group">
+             <div className="w-10 h-10 rounded-full bg-[#C1694F] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-105 shadow-lg">
+               <span className="font-['Playfair_Display'] text-lg font-bold text-white leading-none">Z</span>
+             </div>
+             <div className="flex flex-col justify-center">
+               <span className="block font-['Playfair_Display'] text-[19px] font-bold text-[#E8927A] leading-[1.1] tracking-tight">
+                 Zion City
+               </span>
+               <span className="block font-['Nunito'] text-[10px] font-bold uppercase tracking-[0.05em] text-white/40 leading-tight mt-0.5">
+                 Courtyard Widows Foundation
+               </span>
+             </div>
+           </Link>
+            <p className="text-sm text-white/60 leading-relaxed max-w-[240px] font-['Nunito'] mt-6">
               Empowering widows through skills training, community support, and economic opportunity — founded in love.
             </p>
           </div>
@@ -43,7 +48,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2">
               {quickLinks.map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-sm text-white/60 hover:text-[#E8927A] transition-colors duration-200 no-underline">
+                  <Link href={href} className="text-sm text-white/60 hover:text-[#E8927A] transition-colors duration-200 no-underline font-['Nunito']">
                     {label}
                   </Link>
                 </li>
@@ -56,56 +61,48 @@ export default function Footer() {
             <h4 className="font-['Nunito'] text-[12px] font-bold text-white/40 uppercase tracking-[1.5px] mb-4">
               Contact Us
             </h4>
-            <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-2.5">
-                <Mail size={15} className="text-[#E8927A] mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@zioncityforwidows.org" className="text-sm text-white/60 hover:text-[#E8927A] transition-colors duration-200 no-underline">
-                  info@zioncityforwidows.org
-                </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <MessageCircle size={15} className="text-[#E8927A] mt-0.5 flex-shrink-0" />
-                <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#E8927A] transition-colors duration-200 no-underline font-semibold">
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-start gap-2.5 group">
+                <MessageCircle size={16} className="text-[#E8927A] mt-0.5 flex-shrink-0" />
+                <a 
+                  href="https://wa.me/2349012345678" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-white/60 group-hover:text-[#E8927A] transition-colors duration-200 no-underline font-semibold font-['Nunito']"
+                >
                   WhatsApp: +234 901 234 5678
                 </a>
               </li>
+
+              <li className="flex items-start gap-2.5 group">
+                <Mail size={16} className="text-[#E8927A] mt-0.5 flex-shrink-0" />
+                <a 
+                  href="mailto:contact@zioncity.org" 
+                  className="text-sm text-white/60 group-hover:text-[#E8927A] transition-colors duration-200 no-underline font-['Nunito']"
+                >
+                  contact@zioncity.org
+                </a>
+              </li>
+              
               <li className="flex items-start gap-2.5">
-                <MapPin size={15} className="text-[#E8927A] mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-white/60">Nigeria</span>
+                <MapPin size={16} className="text-[#E8927A] mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-white/60 font-['Nunito']">Nigeria</span>
               </li>
             </ul>
           </div>
-
-          {/* Follow Us */}
-          <div>
-            <h4 className="font-['Nunito'] text-[12px] font-bold text-white/40 uppercase tracking-[1.5px] mb-4">
-              Follow Us
-            </h4>
-            <a href="#" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-white/60 hover:text-[#E8927A] transition-colors duration-200 no-underline group">
-              <div className="w-8 h-8 rounded-lg bg-white/10 group-hover:bg-[#C1694F]/20 flex items-center justify-center transition-colors duration-200">
-                <Facebook size={16} />
-              </div>
-              Facebook Page
-            </a>
-            <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-white/60 hover:text-[#25D366] transition-colors duration-200 no-underline group mt-3">
-              <div className="w-8 h-8 rounded-lg bg-white/10 group-hover:bg-[#25D366]/20 flex items-center justify-center transition-colors duration-200">
-                <MessageCircle size={16} />
-              </div>
-              WhatsApp Community
-            </a>
-          </div>
+          
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-[13px] text-white/40">
-            © 2026 Zion City for Widows. All rights reserved.
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-[12px] text-white/40 font-['Nunito']">
+            © {new Date().getFullYear()} Zion City for Widows. All rights reserved.
           </p>
-          <p className="text-[13px] text-white/40 italic">
-            Dedicated with love to Mummy on her 70th birthday 🌿
-          </p>
+          <div className="flex items-center gap-2">
+            <p className="text-[11px] text-white/40 italic tracking-wider font-['Nunito']">
+              Non-Denominational · Non-Profit · NGO
+            </p>
+          </div>
         </div>
 
       </div>

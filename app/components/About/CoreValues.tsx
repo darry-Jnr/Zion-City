@@ -1,8 +1,8 @@
 const values = [
   {
     number: '01',
-    title: 'Dignity',
-    desc: 'We honour the inherent worth of every widow, treating each person as a valued member of our community.',
+    title: 'Spiritual Guidance',
+    desc: 'Daily devotion, professional counselling, and prayer support to help restore peace and purpose.',
     bg: 'bg-[#F9E8E0]',
     titleColor: 'text-[#C1694F]',
     descColor: 'text-[#5C3D2E]',
@@ -15,8 +15,8 @@ const values = [
   },
   {
     number: '02',
-    title: 'Empowerment',
-    desc: 'We equip widows with skills, knowledge, and confidence to take control of their futures and achieve economic independence.',
+    title: 'Emotional Healing',
+    desc: 'Group therapy sessions, mentorship, and strong community bonds to ensure no widow walks her journey alone.',
     bg: 'bg-[#2C1810]',
     titleColor: 'text-[#E8927A]',
     descColor: 'text-white/60',
@@ -29,8 +29,8 @@ const values = [
   },
   {
     number: '03',
-    title: 'Community',
-    desc: 'We believe in the power of collective care, support networks, and shared responsibility to lift one another.',
+    title: 'Vocational Training',
+    desc: 'A dedicated 6-month academy featuring certified skill programmes in high-demand trades and crafts.',
     bg: 'bg-[#C1694F]',
     titleColor: 'text-white',
     descColor: 'text-white/75',
@@ -43,8 +43,8 @@ const values = [
   },
   {
     number: '04',
-    title: 'Faith',
-    desc: 'We trust in hope, resilience, and the transformative power of compassion and spiritual support.',
+    title: 'Business Funding',
+    desc: 'Empowering graduates with seed grants to launch their own businesses and achieve lasting financial independence.',
     bg: 'bg-white',
     titleColor: 'text-[#2C1810]',
     descColor: 'text-[#5C3D2E]',
@@ -69,7 +69,7 @@ export default function CoreValues() {
             What We Stand For
           </p>
           <h2 className="font-['Playfair_Display'] text-[clamp(28px,4vw,42px)] font-bold text-[#2C1810] leading-tight">
-            Our Core Values
+            Our Core Pillars
           </h2>
         </div>
 
@@ -84,17 +84,14 @@ export default function CoreValues() {
                 ${v.border ? 'border border-[#C1694F]/12' : ''}
               `}
             >
-              {/* Left — big faded number */}
-              <div className={`flex-shrink-0 font-['Playfair_Display'] text-[56px] font-bold leading-none select-none ${v.numSmColor}`}>
+              <div className={`flex-shrink-0 font-['Playfair_Display'] text-[48px] font-bold leading-none select-none ${v.numSmColor}`}>
                 {v.number}
               </div>
 
-              {/* Vertical divider */}
               <div className={`w-px self-stretch ${v.lineColor}`} />
 
-              {/* Right — title + desc */}
               <div className="flex-1 min-w-0">
-                <h4 className={`font-['Playfair_Display'] text-[18px] font-bold leading-tight mb-1.5 ${v.titleColor}`}>
+                <h4 className={`font-['Playfair_Display'] text-[18px] font-bold leading-tight mb-1 ${v.titleColor}`}>
                   {v.title}
                 </h4>
                 <p className={`font-['Nunito'] text-[12px] leading-relaxed ${v.descColor}`}>
@@ -118,7 +115,6 @@ export default function CoreValues() {
                 ${v.border ? 'border border-[#C1694F]/12 shadow-[0_2px_16px_rgba(193,105,79,0.06)] hover:shadow-[0_16px_48px_rgba(193,105,79,0.1)]' : 'hover:shadow-[0_16px_48px_rgba(44,24,16,0.15)]'}
               `}
             >
-              {/* Huge background number */}
               <div
                 className={`absolute -bottom-4 -right-2 font-['Playfair_Display'] text-[120px] font-bold leading-none select-none pointer-events-none ${v.numColor}`}
                 aria-hidden
@@ -126,14 +122,12 @@ export default function CoreValues() {
                 {v.number}
               </div>
 
-              {/* Top label */}
               <div className="relative z-10">
                 <span className={`font-['Nunito'] text-[11px] font-bold tracking-[2px] uppercase ${v.titleColor} opacity-50`}>
-                  {v.number}
+                  Pillar {v.number}
                 </span>
               </div>
 
-              {/* Bottom content */}
               <div className="relative z-10 mt-auto">
                 <h4 className={`font-['Playfair_Display'] text-[24px] font-bold leading-tight mb-3 ${v.titleColor}`}>
                   {v.title}
@@ -146,7 +140,6 @@ export default function CoreValues() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

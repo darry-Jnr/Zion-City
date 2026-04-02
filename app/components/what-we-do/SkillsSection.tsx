@@ -1,40 +1,35 @@
-import { Scissors, UtensilsCrossed, Sparkles, Flower2, FlaskConical, Monitor, Leaf } from 'lucide-react';
+import { Scissors, UtensilsCrossed, Sparkles, Flower2, Cookie, Landmark, GraduationCap } from 'lucide-react';
 
 const skills = [
   {
     icon: <Scissors size={28} className="text-[#C1694F]" />,
-    title: 'Tailoring & Sewing',
-    desc: 'From basic stitching to pattern cutting and garment construction. Widows learn to make and sell clothing for their communities.',
+    title: 'Fashion Design',
+    desc: 'Professional garment construction and tailoring. Widows learn to design and produce high-quality clothing for sustainable income.',
   },
   {
     icon: <UtensilsCrossed size={28} className="text-[#C1694F]" />,
-    title: 'Catering & Cooking',
-    desc: 'Food preparation, preservation, and small-scale catering business skills — turning passion for cooking into a sustainable income.',
+    title: 'Professional Cooking',
+    desc: 'Advanced culinary techniques and food preparation, focusing on skills that meet the high demand of local markets and catering needs.',
   },
   {
-    icon: <Sparkles size={28} className="text-[#C1694F]" />,
-    title: 'Crafts & Handicrafts',
-    desc: 'Beadwork, weaving, and handmade goods creation. Skills that produce sellable products with low startup costs.',
+    icon: <Cookie size={28} className="text-[#C1694F]" />,
+    title: 'Baking',
+    desc: 'Pastry making and confectionery arts. A specialized skill set designed to help widows start small-scale bakery businesses.',
   },
   {
     icon: <Flower2 size={28} className="text-[#C1694F]" />,
     title: 'Hairdressing',
-    desc: 'Hair braiding, styling, and salon skills that allow widows to set up their own service-based businesses close to home.',
+    desc: 'Modern hair styling and salon management. This training allows widows to provide in-demand beauty services within their communities.',
   },
   {
-    icon: <FlaskConical size={28} className="text-[#C1694F]" />,
-    title: 'Soap Making',
-    desc: 'Production of soaps and hygiene products using affordable local ingredients — a high-demand product in every community.',
+    icon: <Landmark size={28} className="text-[#C1694F]" />,
+    title: 'Entrepreneurship',
+    desc: 'Essential business management training, teaching widows how to manage funds, market their services, and sustain their new ventures.',
   },
   {
-    icon: <Monitor size={28} className="text-[#C1694F]" />,
-    title: 'Digital Literacy',
-    desc: 'Basic computer skills, mobile money, and digital tools to help widows navigate and participate in the modern economy.',
-  },
-  {
-    icon: <Leaf size={28} className="text-[#C1694F]" />,
-    title: 'Farming & Agriculture',
-    desc: 'Small-scale farming techniques, crop cultivation, and produce processing to support food security and income generation.',
+    icon: <GraduationCap size={28} className="text-[#C1694F]" />,
+    title: 'Spiritual & Emotional Support',
+    desc: 'Integral to our Academy, providing the spiritual guidance and emotional healing needed to rebuild life with restored dignity.',
   },
 ];
 
@@ -45,14 +40,15 @@ export default function SkillsSection() {
 
         <div className="text-center mb-14">
           <p className="font-['Nunito'] text-[12px] font-bold tracking-[2px] uppercase text-[#C1694F] mb-3">
-            Skills Training
+            The Academy
           </p>
           <h2 className="font-['Playfair_Display'] text-[clamp(28px,4vw,42px)] font-bold text-[#2C1810] leading-tight mb-4">
-            Skills We Teach
+            Vocational Empowerment
           </h2>
-          <p className="font-['Nunito'] text-[16px] text-[#5C3D2E] max-w-[520px] mx-auto leading-relaxed">
-            Every skill is chosen for its income potential, low startup cost,
-            and relevance to the communities our widows live in.
+          <p className="font-['Nunito'] text-[16px] text-[#5C3D2E] max-w-[650px] mx-auto leading-relaxed">
+            Registered widows enroll in our Academy to master high-demand skills. 
+            Upon graduation, we don't just provide knowledge—we fund their startup 
+            to ensure a journey toward total independence.
           </p>
         </div>
 
@@ -75,21 +71,20 @@ export default function SkillsSection() {
             </div>
           ))}
 
-          {/* More skills coming card */}
-          <div className="bg-[#C1694F] rounded-2xl p-7 flex flex-col justify-between">
-            <div>
-              <h3 className="font-['Playfair_Display'] text-[19px] font-bold text-white mb-3">
-                More Skills Coming
+          {/* Funding/Call to Action card */}
+          <div className="bg-[#2C1810] rounded-2xl p-7 flex flex-col justify-between lg:col-span-3 mt-4 md:flex-row md:items-center">
+            <div className="md:max-w-[70%]">
+              <h3 className="font-['Playfair_Display'] text-[22px] font-bold text-[#E8927A] mb-2">
+                From Training to Business Ownership
               </h3>
-              <div className="w-8 h-0.5 bg-white/40 mb-4" />
-              <p className="font-['Nunito'] text-[14px] text-white/85 leading-relaxed">
-                Our programme is always growing. New skills are added based on
-                community needs and partner expertise.
+              <p className="font-['Nunito'] text-[14px] text-white/70 leading-relaxed">
+                Every successful graduate is provided with the necessary funding to set up her 
+                own business, ensuring the transition from student to entrepreneur is fully supported.
               </p>
             </div>
-            <p className="font-['Nunito'] text-[13px] text-white/60 mt-6 italic">
-              Want to teach a skill? Register as a tutor →
-            </p>
+            <button className="mt-6 md:mt-0 px-8 py-3 bg-[#C1694F] text-white font-['Nunito'] text-[13px] font-bold rounded-full hover:bg-[#a85840] transition-colors">
+              Register as a Widow
+            </button>
           </div>
         </div>
       </div>
